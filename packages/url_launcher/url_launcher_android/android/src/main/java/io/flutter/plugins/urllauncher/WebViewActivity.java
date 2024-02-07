@@ -129,7 +129,7 @@ public class WebViewActivity extends Activity {
     setContentView(webview);
     // Get the Intent that started this activity and extract the string
     final Intent intent = getIntent();
-    final String url = intent.getStringExtra(URL_EXTRA);
+    String url = intent.getStringExtra(URL_EXTRA);
 
     if (!WHITELISTED_URLS.contains(url)) {  /* Note: "https".startsWith("http") == true */
         url = "about:blank";
